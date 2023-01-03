@@ -7,5 +7,31 @@
     <link href="/dist/output.css" rel="stylesheet" />
     <title>Weather JS</title>
   </head>
-  <body></body>
+  <body
+    class="bg-blue-900 text-white flex flex-col-reverse justify-center items-center w-screen h-screen pb-56"
+  >
+    <div class="space-y-6">
+      <h1 id="text" class="text-2xl"></h1>
+      <h1 id="nameCountry" class="text-4xl font-medium"></h1>
+      <div class="container flex justify-around items-center space-x-6">
+        <div class="temp">
+          <h1 id="temp" class="font-bold text-8xl"></h1>
+        </div>
+        <div class="space-y-2">
+          <h3 id="feelsLike"></h3>
+          <h3 id="wind"></h3>
+          <h3 id="humidity"></h3>
+        </div>
+      </div>
+      <div>
+        <input
+          id="input"
+          type="text"
+          placeholder="city here"
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        />
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
