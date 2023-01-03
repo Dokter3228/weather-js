@@ -10,7 +10,10 @@
   <body
     class="bg-blue-900 text-white flex flex-col-reverse justify-center items-center w-screen h-screen pb-56"
   >
-    <div class="space-y-6">
+    <div class="loader" hidden id="loader">
+      <h1 class="text-8xl text-gray-600">Loading...</h1>
+    </div>
+    <div class="space-y-6" id="container">
       <h1 id="text" class="text-2xl"></h1>
       <h1 id="nameCountry" class="text-4xl font-medium"></h1>
       <div class="container flex justify-around items-center space-x-6">

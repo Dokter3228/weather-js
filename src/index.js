@@ -1,5 +1,6 @@
 const input = document.getElementById("input");
-
+const container = document.getElementById("container");
+const loader = document.getElementById("loader");
 // values
 const textValue = document.getElementById("text");
 const nameCountry = document.getElementById("nameCountry");
@@ -9,6 +10,8 @@ const wind = document.getElementById("wind");
 const humidityValue = document.getElementById("humidity");
 
 const getData = (city) => {
+  container.style.opacity = "0";
+  loader.hidden = false;
   fetch(
     `http://api.weatherapi.com/v1/current.json?key=e4c7cd46751e4677b5c164646230301&q=${city}&aqi=yes`
   )
@@ -31,6 +34,10 @@ const getData = (city) => {
       feelsLike.textContent = `FEELS LIKE: ${feelslike_c} °C`;
       wind.textContent = `WIND:  ${wind_mph} MPH`;
       humidityValue.textContent = `HUMIDITY: ${humidity} %`;
+    })
+    .finally(() => {
+      container.style.opacity = "100%";
+      loader.hidden = true;
     });
 };
 
